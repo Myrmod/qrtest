@@ -62,7 +62,7 @@
             
             switch (correctionLevel){
             case "L":
-                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                var qrcode = new QRCode(document.getElementById("qrcanvas"), {
                 text: content,
                 width: 256,
                 height: 256,
@@ -73,7 +73,7 @@
                 factor = 15;
                 break;
             case "M":
-                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                var qrcode = new QRCode(document.getElementById("qrcanvas"), {
                 text: content,
                 width: 256,
                 height: 256,
@@ -84,7 +84,7 @@
                 factor = 10;
                 break;
             case "Q":
-                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                var qrcode = new QRCode(document.getElementById("qrcanvas"), {
                 text: content,
                 width: 256,
                 height: 256,
@@ -95,7 +95,7 @@
                 factor = 4;
                 break;
             case "H":
-                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                var qrcode = new QRCode(document.getElementById("qrcanvas"), {
                 text: content,
                 width: 256,
                 height: 256,
