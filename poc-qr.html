@@ -32,19 +32,19 @@
     </br>
     <button onclick="generateQR()">Generate</button>
 
-    
+
     <canvas id="qrcanvas" width="256" height="256"></canvas>
-    
+
     <script type="text/javascript">
         function generateQR() {
             document.getElementById("qrcode")
-            var canvas = getElementById("qrcanvas")
+            var canvas = document.getElementById("qrcanvas")
             var context = canvas.getContext("2d");
             context.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             //const qrcanvas = canvas.getContext("qrcode");
             //qrcanvas.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             let content = document.querySelector("#content").value;
 
             var correctionLevel;
@@ -59,7 +59,7 @@
                     break;
                 }
             }
-            
+
             switch (correctionLevel){
             case "L":
                 var qrcode = new QRCode(document.getElementById("qrcanvas"), {
@@ -106,12 +106,12 @@
                 factor = 3;
                 break;
             }
-            
+
             var elem = document.createElement("img");
-            elem.setAttribute("src", getElementById("Download.png"));
+            elem.setAttribute("src", document.getElementById("Download.png"));
             elem.setAttribute("height", document.getElementById("qrcode").height/factor);
             elem.setAttribute("width", document.getElementById("qrcode").width/factor);
-            
+
             document.getElementById("qrcode").appendChild(elem);
         }
         //document.getElementById("qrcode").appendChild(elem);</script>
